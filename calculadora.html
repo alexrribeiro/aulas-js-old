@@ -1,0 +1,41 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Calculadora</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script type="text/javascript" src="calculadora.js"></script>
+    </head>
+    <body class="bg-dark">
+        <nav class="navbar bg-warning">
+            <p class="navbar-brand">Calculadora</a>
+        </nav>
+        <div class="container">
+            <form name="frmCalculadora" action="#" method="GET">
+                <div class="row mt-3">
+                    <div class="col">
+                        <input type="text" name="txtNumero1" class="form-control" placeholder="Primeiro número" id="txtNumero1" autofocus>
+                    </div>
+                    <div class="col">
+                        <select class="form-control" id="selOperacao">
+                            <option>Operação</option>
+                            <option value="soma">Somar</option>
+                            <option value="subt">Subtrair</option>
+                            <option value="mult">Multiplicar</option>
+                            <option value="div">Dividir</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <input type="text" name="txtNumero2" class="form-control" placeholder="Segundo número" id="txtNumero2">
+                    </div>
+                    <div class="col">
+                        <button type="button" name="btnCalcular" class="btn btn-warning" id="btnCalcular" onclick="calcular()" style="width: 45%;">Calcular</button>
+                        <button type="reset" class="btn btn-secondary" id="btnLimpar" style="width: 45%;">Limpar</button>
+                    </div>
+                    <div class="col">
+                        <input type="text" name="txtResultado" class="form-control" placeholder="Resultado" id="txtResultado" disabled>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
