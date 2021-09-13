@@ -85,3 +85,129 @@ function modoNormal(){
     botaoNormal.style.display = "none";
     botaoNoturno.style.display = "block";
 }
+
+function exibirDataDeHoje(){
+    var agora = new Date();
+    var diasem = agora.getDay();
+    var dia = agora.getDate();
+    var mes = agora.getMonth();
+    var ano = agora.getFullYear();
+    var exibe = document.getElementById("exibirDia");
+
+    // if(diasem == 0) {
+    //     diasem = "Domingo";
+    // } else if (diasem == 1 ){
+    //     diasem = "Segunda-feira";
+    // } else if (diasem == 2 ){
+    //     diasem = "Terça-feira";
+    // } else if (diasem == 3 ){
+    //     diasem = "Quarta-feira";
+    // } else if (diasem == 4 ){
+    //     diasem = "Quinta-feira";
+    // } else if (diasem == 5 ){
+    //     diasem = "Sexta-feira";
+    // } else if (diasem == 6 ){
+    //     diasem = "Sábado";
+    // } else {
+    //     alert("Ocorreu um problema para determinar o dia da semana.")
+    //     diasem = "";
+    // }
+
+    switch(diasem){
+        case 0:
+            diasem = "Domingo";
+            break;
+        case 1:
+            diasem = "Segunda-feira";
+            break;
+        case 2:
+            diasem = "Terça-feira";
+            break;
+        case 3:
+            diasem = "Quarta-feira";
+            break;
+        case 4:
+            diasem = "Quinta-feira";
+            break;
+        case 5:
+            diasem = "Sexta-feira";
+            break;
+        case 6:
+            diasem = "Sábado";
+            break;
+        default:
+            alert("Ocorreu um problema para determinar o dia da semana.")
+            diasem = "";
+            break;
+    }
+    
+    switch(mes){
+        case 0:
+        case 2:
+        case 4:
+        case 6:
+        case 7:
+        case 9:
+        case 11:
+            alert("Mês com 31 dias!");
+            break;
+        case 3:
+        case 5:
+        case 8:
+        case 10:
+            alert("Mês com 30 dias!");
+            break;
+        case 1:
+            alert("Mês com 28 ou 29 dias!");
+            break;
+        default:
+            alert("Não foi possível determinar o mês.");
+    }
+
+    switch(mes){
+        case 0:
+            mes = "janeiro"; 
+            break;
+        case 1:
+            mes = "fevereiro"; 
+            break;
+        case 2:
+            mes = "março"; 
+            break;
+        case 3:
+            mes = "abril"; 
+            break;
+        case 4:
+            mes = "maio"; 
+            break;
+        case 5:
+            mes = "junho"; 
+            break;
+        case 6:
+            mes = "julho"; 
+            break;
+        case 7:
+            mes = "agosto"; 
+            break;
+        case 8:
+            mes = "setembro";
+            break;
+        case 9:
+            mes = "outubro"; 
+            break;
+        case 10:
+            mes = "novembro"; 
+            break;
+        case 11:
+            mes = "dezembro"; 
+            break;
+        default:
+            alert("Ocorreu um problema para determinar o mês.");
+            mes = "";
+            break;
+    }
+    
+
+    exibe.innerHTML = diasem + ", " + dia + " de " + mes + " de " + ano;
+
+}
