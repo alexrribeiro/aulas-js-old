@@ -211,3 +211,41 @@ function exibirDataDeHoje(){
     exibe.innerHTML = diasem + ", " + dia + " de " + mes + " de " + ano;
 
 }
+
+function tabuada(){
+    var numero = document.getElementById("txtNumero").value;
+    var resultado = document.getElementById("resultados");
+    resultado.style.display = "block";
+    var produto;
+
+    resultado.innerHTML = "";
+    
+    for (i = 0; i <= 10; i++){
+        produto = numero * i;
+        resultado.innerHTML += ("<p>" + numero + " x " + i + " = " + produto + "</p>");
+    }
+}
+
+function clear(){
+    var resultado = document.getElementById("resultados");
+    var numero = document.getElementById("txtNumero");
+    resultado.style.display = "none";
+    numero.focus();
+}
+
+// Ver possibilidade de fazer isso com matrizes, talvez seja viável... com while não foi.
+function adicionarTelefone(){ 
+    var telefone;
+    var adicionados = document.getElementById("telefones");
+    adicionados.style.display = "block";
+    var i = 0;
+
+    // resultado.innerHTML = "";
+    
+    while (i < 4) {
+        telefone = document.getElementById("txtFone").value;
+        adicionados.innerHTML += ("<p>Número " + parseInt(i+1) + " adicionado: " + telefone + "</p>");
+        // alert(telefone);
+        i++;
+    }
+}
