@@ -249,3 +249,44 @@ function adicionarTelefone(){
         i++;
     }
 }
+
+function desconto(){
+    // Verificam se os checkboxes estão marcados - Retorna true ou false
+    var escolheuMarmitex = document.getElementById("chkMarmitex").checked;
+    var escolheuRefri = document.getElementById("chkRefri").checked;
+    var escolheuSobremesa = document.getElementById("chkSobremesa").checked;
+    
+    // Definindo os preços dos produtos
+    var precoMarmitex = 16.9;
+    var precoRefri = 5.9;
+    var precoSobremesa = 6.9;
+    var total;
+
+    if (escolheuMarmitex == true && escolheuRefri == true && escolheuSobremesa == true) {
+        total = (precoMarmitex + precoRefri + precoSobremesa) * 0.85;
+    }
+    if (escolheuMarmitex == true && escolheuRefri == true && escolheuSobremesa == false) {
+        total = (precoMarmitex + precoRefri) * 0.9;
+    }
+    if (escolheuMarmitex == true && escolheuRefri == false && escolheuSobremesa == true) {
+        total = (precoMarmitex + precoSobremesa) * 0.9;
+    }
+    if (escolheuMarmitex == false && escolheuRefri == true && escolheuSobremesa == true) {
+        total = (precoRefri + precoSobremesa) * 0.95;
+    }
+    if (escolheuMarmitex == true && escolheuRefri == false && escolheuSobremesa == false) {
+        total = precoMarmitex;
+    }
+    if (escolheuMarmitex == false && escolheuRefri == false && escolheuSobremesa == true) {
+        total = precoSobremesa;
+    }
+    if (escolheuMarmitex == false && escolheuRefri == true && escolheuSobremesa == false) {
+        total = precoRefri;
+    }
+    if (escolheuMarmitex == false && escolheuRefri == false && escolheuSobremesa == false) {
+        alert("Escolha pelo menos uma das opções!");
+    }
+    
+    valor.style.display = "block";
+    valor.innerHTML = total;
+}
