@@ -10,31 +10,31 @@
             <p class="navbar-brand">Pedido de marmitex</a>
         </nav>
         <div class="container">
-            <div class="row">
+            <div class="row my-3">
                 <p>Selecione nas caixas a seguir o que deseja em seu marmitex. Ao clicar no botão OK o valor e o desconto (caso exista) será exibido na página.</p>
             </div>
-            <div class="row">
-                <form name="frmAlmoco" method="POST">
-                    <div class="form-group">
-                        <div class="form-check form-check-inline">
+            <form name="frmAlmoco" method="POST">
+                <div class="row my-3">
+                    <div class="form-group col-6">
+                        <div class="form-check form-check-inline form-control-lg">
                             <input class="form-check-input" type="checkbox" value="comida" id="chkMarmitex" name="conteudo">
-                            <label class="form-chcek-label" for="chkMarmitex">Marmitex do dia</label>
+                            <label class="form-check-label" for="chkMarmitex">Marmitex do dia</label>
                         </div>
-                        <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline form-control-lg">
                             <input class="form-check-input" type="checkbox" value="refri" id="chkRefri" name="conteudo">
-                            <label class="form-chcek-label" for="chkRefri">Refrigerante</label>
+                            <label class="form-check-label" for="chkRefri">Refrigerante</label>
                         </div>
-                        <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline form-control-lg">
                             <input class="form-check-input" type="checkbox" value="sobremesa" id="chkSobremesa" name="conteudo">
-                            <label class="form-chcek-label" for="chkSobremesa">Sobremesa</label>
+                            <label class="form-check-label" for="chkSobremesa">Sobremesa</label>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-6">
                         <button type="button" name="btnOk" class="btn btn-warning" id="btnOk" onclick="desconto()" style="width: 45%;">OK</button>
                         <button type="reset" class="btn btn-secondary" id="btnLimpar" style="width: 45%;">Limpar</button>
                     </div>
-                </form>
-            </div>
+                </div>
+            </form>
             <div class="row">
                 <div id="valor" class="alert alert-warning" style="display: none;"></div>
             </div>
