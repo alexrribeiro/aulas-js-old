@@ -1,0 +1,33 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Simulação de Investimento</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script type="text/javascript" src="investimento.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-success">
+            <p class="navbar-brand">Simulação de Investimento</a>
+        </nav>
+        <div class="container">
+            <form name="frmSimulaInvestimento" method="POST">
+                <div class="row my-3">
+                    <div class="col">
+                        <input type="text" name="txtValor" class="form-control border border-success text-success" placeholder="Valor a investir" id="txtValor" autofocus>
+                    </div>
+                    <div class="col">
+                        <input type="text" name="txtMeses" class="form-control border border-success text-success" placeholder="Meses a investir" id="txtMeses">
+                    </div>
+                    <div class="col">
+                        <button type="button" name="btnCalcular" class="btn btn-success" style="width: 49%;" id="btnCalcular" onclick="calcularInvestimento()">Calcular Investimento</button>
+                        <button type="reset" class="btn btn-secondary" style="width: 49%;" id="btnLimpar">Limpar</button>
+                    </div>
+                </div>
+            </form>
+            <div id="resultado" class="my-3 alert alert-success" style="display: none;">
+            </div>
+            <div id="resultadoDetalhado" class="my-3 alert alert-success" style="display: none;">
+            </div>
+        </div>
+    </body>
+</html>

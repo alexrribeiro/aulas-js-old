@@ -271,8 +271,10 @@ function gerarNumerosMatriz(){
         vernum = numero[i]; // número i atual será verificado
 
         for (j = 0; j < i; j++){
+            // Resolve parcialmente, os dois últimos números podem se repetir
             if (vernum == numero[j]){
-                numero[i] = Math.floor(Math.random()*60);
+                //Se encontrado um número repetido, sorteia de novo
+                numero[i] = Math.floor(Math.random() * 60); 
             }
         }
 
