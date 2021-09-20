@@ -217,12 +217,66 @@ function tabuada(){
     var resultado = document.getElementById("resultados");
     resultado.style.display = "block";
     var produto;
+    var i = 0;
 
     resultado.innerHTML = "";
     
-    for (i = 0; i <= 10; i++){
+    // for (i = 0; i <= 10; i++){
+    //     produto = numero * i;
+    //     resultado.innerHTML += ("<p>" + numero + " x " + i + " = " + produto + "</p>");
+    // }
+
+    while(i <= 10) {
         produto = numero * i;
         resultado.innerHTML += ("<p>" + numero + " x " + i + " = " + produto + "</p>");
+        i++;
+    }
+}
+
+// function gerarNumeros(){
+//     var numerosResultado = document.getElementById("numerosGerados");
+//     numerosResultado.style.display = "block";
+//     var numero;
+//     var i = 0;
+
+//     numerosResultado.innerHTML = "";
+    
+//     while (i < 6) {
+//         numero = Math.floor(Math.random() * 60);
+//         numerosResultado.innerHTML += ("<p>" + numero + "</p>");
+//         i++;
+//     }
+// }
+
+
+function gerarNumerosMatriz(){
+    var numero = [];
+    var numerosResultado = document.getElementById("numerosGerados");
+    numerosResultado.style.display = "block";
+    var i = 0;
+    var j = 0;
+    var vernum;
+
+    numerosResultado.innerHTML = "";
+    
+    for (i = 0; i < 6; i++) {
+        numero[i] = Math.floor(Math.random() * 60);
+
+        if(numero[i] == 0){
+            numero[i] = 60;
+        }
+        
+        j = i;
+        numero[j] = numero[i]; // passa o valor do número i para o j sempre
+        vernum = numero[i]; // número i atual será verificado
+
+        for (j = 0; j < i; j++){
+            if (vernum == numero[j]){
+                numero[i] = Math.floor(Math.random()*60);
+            }
+        }
+
+        numerosResultado.innerHTML += ("<p>" + numero[i] + "</p>");
     }
 }
 
@@ -261,6 +315,7 @@ function desconto(){
     var precoRefri = 5.9;
     var precoSobremesa = 6.9;
     var total;
+    var mensagem;
 
     if (escolheuMarmitex == true && escolheuRefri == true && escolheuSobremesa == true) {
         total = (precoMarmitex + precoRefri + precoSobremesa) * 0.85;
@@ -284,9 +339,16 @@ function desconto(){
         total = precoRefri;
     }
     if (escolheuMarmitex == false && escolheuRefri == false && escolheuSobremesa == false) {
-        alert("Escolha pelo menos uma das opções!");
+        // alert("Escolha pelo menos uma das opções!");
+        valor.style.display = "block";
+        valor.innerHTML = "Escolha pelo menos uma das opções!"
     }
-    
+  
+    mensagem = "Seu pedido custará " + total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     valor.style.display = "block";
-    valor.innerHTML = total;
+    valor.innerHTML = mensagem;
+}
+
+function ocultarResult(){
+    valor.style.display = "none";
 }

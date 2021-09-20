@@ -11,7 +11,7 @@
         </nav>
         <div class="container">
             <div class="row my-3">
-                <p>Selecione nas caixas a seguir o que deseja em seu marmitex. Ao clicar no botão OK o valor e o desconto (caso exista) será exibido na página.</p>
+                <p>Selecione nas caixas a seguir o que deseja em seu pedido. Ao clicar no botão OK o valor do seu pedido será exibido na página.</p>
             </div>
             <form name="frmAlmoco" method="POST">
                 <div class="row my-3">
@@ -31,7 +31,7 @@
                     </div>
                     <div class="form-group col-6">
                         <button type="button" name="btnOk" class="btn btn-warning" id="btnOk" onclick="desconto()" style="width: 45%;">OK</button>
-                        <button type="reset" class="btn btn-secondary" id="btnLimpar" style="width: 45%;">Limpar</button>
+                        <button type="reset" class="btn btn-secondary" id="btnLimpar" style="width: 45%;" onclick="ocultarResult()">Limpar</button>
                     </div>
                 </div>
             </form>
