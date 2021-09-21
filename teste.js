@@ -221,16 +221,22 @@ function tabuada(){
 
     resultado.innerHTML = "";
     
-    // for (i = 0; i <= 10; i++){
-    //     produto = numero * i;
-    //     resultado.innerHTML += ("<p>" + numero + " x " + i + " = " + produto + "</p>");
-    // }
-
-    while(i <= 10) {
+    for (i = 0; i <= 10; i++){
         produto = numero * i;
         resultado.innerHTML += ("<p>" + numero + " x " + i + " = " + produto + "</p>");
-        i++;
     }
+
+    // while(i <= 10) {
+    //     produto = numero * i;
+    //     resultado.innerHTML += ("<p>" + numero + " x " + i + " = " + produto + "</p>");
+    //     i++;
+    // }
+
+    // do {
+    //     produto = numero * i;
+    //     resultado.innerHTML += ("<p>" + numero + " x " + i + " = " + produto + "</p>");
+    //     i++;
+    // } while (i <= 10);
 }
 
 // function gerarNumeros(){
@@ -278,7 +284,8 @@ function gerarNumerosMatriz(){
             }
         }
 
-        numerosResultado.innerHTML += ("<p>" + numero[i] + "</p>");
+        // numerosResultado.innerHTML += ("<p>" + numero[i] + "</p>");
+        numerosResultado.innerHTML += (numero[i] + "&nbsp; &nbsp; &nbsp;");
     }
 }
 
@@ -353,4 +360,41 @@ function desconto(){
 
 function ocultarResult(){
     valor.style.display = "none";
+}
+
+function testesLoop(){
+    var carros = ["Polo", "Onix", "Argo", "208"];
+
+    document.write("Conteúdo do array: " + carros);
+
+    //Testar com while e do while também?
+
+    document.write("<hr>");
+    document.write("<p>Testando com for:</p>");
+    for(i = 0; i<carros.length; i++){
+        document.write("<li>Modelo de carro: " + carros[i] + "</li>");
+    }
+
+    document.write("<hr>");
+    document.write("<p>Testando forEach:</p>");
+    
+    function exibir(item){
+        document.write("<li>Modelo de carro: " + item + "</li>");
+    }
+
+    carros.forEach(exibir);
+
+    document.write("<hr>");
+    document.write("<p>Testando for of</p>");
+
+    for (let carro of carros) {
+        document.write("<li>Modelo de carro: " + carro + "</li>");
+    }
+
+    document.write("<hr>");
+    document.write("<p>Testando for in</p>");
+
+    for (let carro in carros) {
+        document.write("<li>Índice: " + carro + " Modelo: " + carros[carro] + "</li>");
+    }
 }
