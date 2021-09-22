@@ -363,17 +363,20 @@ function ocultarResult(){
 }
 
 function testesLoop(){
-    var carros = ["Polo", "Onix", "Argo", "208"];
+    // Declaração do array e exibição do conteúdo
+    var carros = ["Polo", "Onix", "Argo", "HB20", "208"];
 
     document.write("Conteúdo do array: " + carros);
 
-    //Testar com while e do while também?
+    // Exibindo o conteúdo utilizando estrutura For
 
     document.write("<hr>");
     document.write("<p>Testando com for:</p>");
     for(i = 0; i<carros.length; i++){
         document.write("<li>Modelo de carro: " + carros[i] + "</li>");
     }
+
+    // Exibindo o conteúdo utilizando função forEach
 
     document.write("<hr>");
     document.write("<p>Testando forEach:</p>");
@@ -384,12 +387,16 @@ function testesLoop(){
 
     carros.forEach(exibir);
 
+    // Exibindo o conteúdo utilizando estrutura For of
+
     document.write("<hr>");
     document.write("<p>Testando for of</p>");
 
     for (let carro of carros) {
         document.write("<li>Modelo de carro: " + carro + "</li>");
     }
+
+    // Exibindo o conteúdo utilizando estrutura For in
 
     document.write("<hr>");
     document.write("<p>Testando for in</p>");
