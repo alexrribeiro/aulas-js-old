@@ -1,0 +1,43 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Gerador de Números</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script type="text/javascript" src="gerador.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-secondary">
+            <p class="navbar-brand">Gerador de Números para Loterias</a>
+        </nav>
+        <div class="container">
+            <div class="row my-3">
+                <div class="col">
+                    <button type="button" class="btn btn-success w-100" onclick="megaSena()">Mega Sena</button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-primary w-100" onclick="quina()">Quina</button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-danger w-100" onclick="duplaSena()">Dupla Sena</button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-danger w-100" onclick="lotoFacil()">Lotofácil</button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-warning w-100" onclick="lotoMania()">Lotomania</button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-warning w-100" onclick="timeMania()">Timemania</button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-warning w-100" onclick="diaDeSorte()">Dia de Sorte</button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-success w-100" onclick="superSete()">Super Sete</button>
+                </div>
+            </div>
+            <div class="row my-3 alert alert-secondary" id="numerosGerados" style="display: none;">
+            </div>  
+        </div>
+    </body>
+</html>
