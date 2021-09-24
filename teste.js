@@ -405,3 +405,35 @@ function testesLoop(){
         document.write("<li>Índice: " + carro + " Modelo: " + carros[carro] + "</li>");
     }
 }
+
+function verificarBeneficio() {
+    var salario = document.getElementById("txtSalario").value;
+    var anoInicio = document.getElementById("txtAnoInicio").value;
+    var filhos = document.getElementById("txtFilhos").value;
+    var anoAtual = new Date().getFullYear();
+    var beneficio, acrescimo;
+    var resultado = document.getElementById("resultado");
+    resultado.style.display = "block";
+
+    if (filhos < 0){
+        alert("Digite um número válido de filhos!");
+    }
+    else {
+        if ((salario < 2200 && anoInicio < anoAtual-10) || filhos != 0){
+            beneficio = salario * 0.1;
+            acrescimo = filhos * salario * 0.01;
+            var receber = beneficio + acrescimo;
+            resultado.className = "my-3 alert alert-success";
+            resultado.innerHTML = "<p>O valor do benefício será " + receber;
+        }
+        else if (salario < 2200 || anoInicio < anoAtual-10){
+            beneficio = salario * 0.05;
+            resultado.innerHTML = "<p>O valor do benefício será " + beneficio;
+        }
+        else {
+            resultado.className = "my-3 alert alert-danger";
+            resultado.innerHTML = "<p>O funcionário não poderá receber o benefício.</p>"
+        }
+    }
+
+}

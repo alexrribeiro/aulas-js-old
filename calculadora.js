@@ -84,17 +84,17 @@ function multiplicar(n1, n2){
     return resultado;
 }
 
-// function dividir(n1, n2){
-//     this.n1 = n1;
-//     this.n2 = n2;
+function dividir(n1, n2){
+    this.n1 = n1;
+    this.n2 = n2;
 
-//     resultado = n1 / n2;
+    resultado = n1 / n2;
     
-//     // Tratamento para se o usuário digitar zero no segundo número
-//     if(n2 == 0){
-//         alert("Não é possível dividir por zero!");
-//         resultado = "Resultado";
-//     }
+    // Tratamento para se o usuário digitar zero no segundo número
+    if(n2 == 0){
+        alert("Não é possível dividir por zero!");
+        resultado = "Resultado";
+    }
 
-//     return resultado;
-// }
+    return resultado;
+}
