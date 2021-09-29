@@ -297,21 +297,33 @@ function clear(){
 }
 
 // Ver possibilidade de fazer isso com matrizes, talvez seja viável... com while não foi.
-function adicionarTelefone(){ 
-    var telefone;
-    var adicionados = document.getElementById("telefones");
-    adicionados.style.display = "block";
-    var i = 0;
+// function adicionarTelefone(){ 
+//     var nome = [];
+//     var telefone = [];
+//     var nomeAdd, telefoneAdd;
+//     var continuar = document.getElementById("chkContinuar").checked;
+//     // var adicionados = document.getElementById("telefones");
+//     // adicionados.style.display = "block";
+//     // var i = 0;
 
-    // resultado.innerHTML = "";
+//     // resultado.innerHTML = "";
     
-    while (i < 4) {
-        telefone = document.getElementById("txtFone").value;
-        adicionados.innerHTML += ("<p>Número " + parseInt(i+1) + " adicionado: " + telefone + "</p>");
-        // alert(telefone);
-        i++;
-    }
-}
+//     // while (i < 4) {
+//     //     telefone = document.getElementById("txtFone").value;
+//     //     adicionados.innerHTML += ("<p>Número " + parseInt(i+1) + " adicionado: " + telefone + "</p>");
+//     //     // alert(telefone);
+//     //     i++;
+//     // }
+
+//     do {
+//         nomeAdd = document.getElementById("txtNome").value;
+//         nome.push(nomeAdd);
+//         telefoneAdd = document.getElementById("txtFone").value;
+//         telefone.push(telefoneAdd);
+//     } while (continuar == true);
+
+//     console.log(nome);
+// }
 
 function desconto(){
     // Verificam se os checkboxes estão marcados - Retorna true ou false

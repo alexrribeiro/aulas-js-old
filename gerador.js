@@ -3,6 +3,56 @@ var i = 0;
 var j = 0;
 var vernum;
 var max;
+var universo;
+
+function sorteio(universo) {
+    this.universo = universo;
+    var sorteado = Math.ceil(Math.random() * universo);;
+    return sorteado;
+}
+
+function newMegaSena(){
+    var numerosResultado = document.getElementById("numerosGerados");
+    numerosResultado.style.display = "block";
+    numerosResultado.className = "alert alert-success";
+
+    numerosResultado.innerHTML = "<p><strong>Mega Sena<strong></p>";
+
+    // universo = 60;
+
+    //Sorteia os números
+    for (i = 0; i < 6; i++) {
+        numero[i] = sorteio(60);
+        vernum = numero[i];
+
+        for (j = 0; j < i; j++) {
+            if (vernum == numero[j]) {
+                numero [i] = sorteio(60);
+            }
+        }
+
+        numerosResultado.innerHTML += (numero[i] + "&nbsp; &nbsp; &nbsp;");
+    }
+}
+
+function newLotoFacil(){
+    var numerosResultado = document.getElementById("numerosGerados");
+    numerosResultado.style.display = "block";
+    numerosResultado.className = "alert alert-danger";
+
+    numerosResultado.innerHTML = "<p><strong>Lotofacil<strong></p>";
+    
+    //Sorteia os números
+    for (i = 0; i < 15; i++) {
+        numero[i] = sorteio(25);
+
+        
+        
+        // numerosResultado.innerHTML += (numero[i] + "&nbsp; &nbsp; &nbsp;");
+        
+        numerosResultado.innerHTML += (numero[i] + "&nbsp; &nbsp; &nbsp;");
+    }
+}
 
 function gerarNumeros(){
     var numerosResultado = document.getElementById("numerosGerados");
