@@ -106,7 +106,7 @@ function lotoFacil() {
 
 function lotoMania() {
     limpar();
-    var exibir = sortearNumeros(0,99,50);
+    var exibir = sortearNumeros(1,100,50);
 
     var numerosResultado = document.getElementById("numerosGerados");
     numerosResultado.style.display = "block";
@@ -115,6 +115,8 @@ function lotoMania() {
     numerosResultado.innerHTML = "<p><strong>Lotomania<strong></p>";
     
     for(var result of exibir) {
+        if (result == 100)
+            result = 0;
         numerosResultado.innerHTML += (result + "&nbsp; &nbsp; &nbsp;");
     }
 }
@@ -170,7 +172,9 @@ function superSete(){
     numerosResultado.innerHTML = "<p><strong>Super Sete<strong></p>";
 
     for (var i = 0; i < 7; i++) {
-        numero = sortearNumeros(0,9,1);
+        numero = sortearNumeros(1,10,1);
+        if (numero == 10)
+            numero = 0;
         numerosResultado.innerHTML += (numero + "&nbsp; &nbsp; &nbsp;");
     }
 }
