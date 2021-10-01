@@ -1,0 +1,43 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Pedido de marmitex</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script type="text/javascript" src="teste.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-primary">
+            <p class="navbar-brand">Pedido de marmitex</a>
+        </nav>
+        <div class="container">
+            <div class="row my-3">
+                <p>Selecione nas caixas a seguir o que deseja em seu pedido. Ao clicar no botão OK o valor do seu pedido será exibido na página.</p>
+            </div>
+            <form name="frmAlmoco" method="POST">
+                <div class="row my-3">
+                    <div class="form-group col-6">
+                        <div class="form-check form-check-inline form-control-lg">
+                            <input class="form-check-input" type="checkbox" value="comida" id="chkMarmitex" name="conteudo">
+                            <label class="form-check-label" for="chkMarmitex">Marmitex do dia</label>
+                        </div>
+                        <div class="form-check form-check-inline form-control-lg">
+                            <input class="form-check-input" type="checkbox" value="refri" id="chkRefri" name="conteudo">
+                            <label class="form-check-label" for="chkRefri">Refrigerante</label>
+                        </div>
+                        <div class="form-check form-check-inline form-control-lg">
+                            <input class="form-check-input" type="checkbox" value="sobremesa" id="chkSobremesa" name="conteudo">
+                            <label class="form-check-label" for="chkSobremesa">Sobremesa</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-6">
+                        <button type="button" name="btnOk" class="btn btn-warning" id="btnOk" onclick="desconto()" style="width: 45%;">OK</button>
+                        <button type="reset" class="btn btn-secondary" id="btnLimpar" style="width: 45%;" onclick="ocultarResult()">Limpar</button>
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div id="valor" class="alert alert-warning w-100" style="display: none;"></div>
+            </div>
+        </div> 
+    </body>
+</html>

@@ -4,6 +4,25 @@
 // var valor4 = "7";
 // var valor5 = "teste"
 
+function intro(){
+    var num1 = parseInt(prompt("Digite um número:"));
+    var num2 = parseInt(prompt("Digite outro número:"));
+
+    var soma = num1 + num2;
+    var sub = num1 - num2;
+    var mult = num1 * num2;
+    var div = num1 / num2;
+    var mod = num1 % num2;
+    var pot = num1 ** num2;
+    
+    document.write("<p>Soma dos dois números: " + soma + "</p>");
+    document.write("<p>Diferença entre os dois números: " + sub + "</p>");
+    document.write("<p>Produto dos dois números: " + mult + "</p>");
+    document.write("<p>Resultado da divisão entre os números: " + div + "</p>");
+    document.write("<p>Resto da divisão entre os números: " + mod + "</p>");
+    document.write("<p>Primeiro número elevado ao segundo: " + pot + "</p>");
+}
+
 // alert(valor1 + valor2);
 // alert(valor3 + valor4);
 // alert(valor1 + valor3);
@@ -13,23 +32,6 @@
 // var nome = prompt("Qual é o seu nome?");
 // document.write("<h3>Bem-vindo(a), " + nome + "!</h3>");
 // alert("Bem-vindo, " + nome);
-
-// var num1 = parseInt(prompt("Digite um número:"));
-// var num2 = parseInt(prompt("Digite outro número:"));
-
-// var soma = num1 + num2;
-// var sub = num1 - num2;
-// var mult = num1 * num2;
-// var div = num1 / num2;
-// var mod = num1 % num2;
-// var pot = num1 ** num2;
-
-// document.write("<p>Soma dos dois números: " + soma + "</p>");
-// document.write("<p>Diferença entre os dois números: " + sub + "</p>");
-// document.write("<p>Produto dos dois números: " + mult + "</p>");
-// document.write("<p>Resultado da divisão entre os números: " + div + "</p>");
-// document.write("<p>Resto da divisão entre os números: " + mod + "</p>");
-// document.write("<p>Primeiro número elevado ao segundo: " + pot + "</p>");
 
 function clique(){
     alert("Obrigado por clicar aqui!");
